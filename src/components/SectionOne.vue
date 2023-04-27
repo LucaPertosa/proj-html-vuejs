@@ -41,7 +41,7 @@ export default {
                                     <option>...</option>
                                 </select>
                             </div>
-                        </div>
+                        </div> 
                         <Buttons :text="'GET IN TOUCH'"/>
                         <Buttons :color="'light'" :text="'READ MORE'" class="mx-4"/>
                     </form>
