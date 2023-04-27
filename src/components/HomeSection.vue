@@ -2,7 +2,7 @@
 import Buttons from '../components/Buttons.vue';
 import { store } from '../store';
 export default {
-    name: "SectionOne",
+    name: "HomeSection",
     components: {
         Buttons
     },
@@ -42,8 +42,8 @@ export default {
                                 </select>
                             </div>
                         </div> 
-                        <Buttons :text="'GET IN TOUCH'"/>
-                        <Buttons :color="'light'" :text="'READ MORE'" class="mx-4"/>
+                        <Buttons :text="'get in touch'"/>
+                        <Buttons :color="'light'" :text="'read more'" class="mx-4"/>
                     </form>
                 </div>
             </div>
@@ -71,6 +71,7 @@ export default {
 }
 .ms_col {
     width: 50%;
+    height: 100%;
 }
 
 h6 {

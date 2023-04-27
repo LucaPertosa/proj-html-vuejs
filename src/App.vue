@@ -1,10 +1,12 @@
 <script>
+import AboutSection from './components/AboutSection.vue';
 import AppHeader from './components/AppHeader.vue';
-import SectionOne from './components/SectionOne.vue';
+import HomeSection from './components/HomeSection.vue';
 export default {
     components: {
         AppHeader,
-        SectionOne,
+        HomeSection,
+        AboutSection,
     },
     data() {
         return {
@@ -16,7 +18,8 @@ export default {
 
 <template>
     <AppHeader/>
-    <SectionOne />
+    <HomeSection />
+    <AboutSection />
 </template>
 
 <style lang="scss">
