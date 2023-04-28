@@ -68,23 +68,28 @@ export const store = reactive({
                 sec: "how it works in practice",
                 title: "process management",
                 parag: "We work with innovative methodologies to ensure that the entire reformatting reformatting process is done from start to finish as planned.",
-                box: {
-                    "collection of information": {
+                box: [
+                    {
+                        title: "collection of information",
                         parag: "Lorem, ipsum dolor sit amet consectetur.",
                     },
-                    "strategic planning": {
+                    {
+                        title: "strategic planning",
                         parag: "Lorem, ipsum dolor sit amet consectetur.",
                     },
-                    "assignment of responsibilities": {
+                    {
+                        title: "assignment of responsibilities",
                         parag: "Lorem, ipsum dolor sit amet consectetur.",
                     },
-                    "formatting process": {
+                    {
+                        title: "formatting process",
                         parag: "Lorem, ipsum dolor sit amet consectetur.",
                     },
-                    "continuity formalization": {
+                    {
+                        title: "continuity formalization",
                         parag: "Lorem, ipsum dolor sit amet consectetur.",
                     },
-                }
+                ]
             },
             team: {
                 sec: "we like what we do",

@@ -9,7 +9,7 @@ export default {
 </script>
 
 <template>
-<button class="ms_btn" :class="color ? color : ''">{{text ? text.toUpperCase() : 'SEE ALL'}}</button>
+    <button class="ms_btn" :class="color ? color : ''">{{text ? text.toUpperCase() : 'SEE ALL'}}</button>
 </template>
 
 <style lang="scss" scoped>

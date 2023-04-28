@@ -49,7 +49,7 @@ export default {
         <a :href="'https://'+ elem + '.com'" v-if="elem === 'linkedin'"><i class="fa-brands fa-linkedin"></i></a>
     </li>
     <li v-else :class="header === 'header' ? 'me-4 ms_upp' : 'black'" v-for="elem in array" :key="elem.id"> 
-        <a href="" v-if="elem !== 'facebook' && elem !== 'twitter' && elem !== 'linkedin'">{{ elem }}</a>
+        <a :href="`#`+ elem" v-if="elem !== 'facebook' && elem !== 'twitter' && elem !== 'linkedin'">{{ elem }}</a>
         <a :href="'https://'+ elem + '.com'" v-if="elem === 'facebook'"><i class="fa-brands fa-facebook"></i></a>
         <a :href="'https://'+ elem + '.com'" v-if="elem === 'twitter'"><i class="fa-brands fa-twitter"></i></a>
         <a :href="'https://'+ elem + '.com'" v-if="elem === 'linkedin'"><i class="fa-brands fa-linkedin"></i></a>

@@ -8,14 +8,15 @@ export default {
     },
     data() {
         return {
-            store
+            store,
+            sectionId: String,
         }
     },
 }
 </script>
 
 <template>
-    <div class="bg-img">
+    <div class="bg-img" :id="'home'">
         <div class="container">
             <div class="ms_row">
                 <div class="ms_col">

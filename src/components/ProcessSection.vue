@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg-img-l">
+    <div class="bg-img-l" :id="'process'">
         <div class="col w-75 mx-auto ms_col text-center">
             <h6>{{this.process.sec}}</h6>
             <h2 class="ms_section-title-b" v-html="highlightWord(this.process.title, 0, true)">
@@ -50,14 +50,14 @@ export default {
         </div>
         <div class="ms_green"></div>
         <div class="process-row justify-content-around">
-            <div class="process-col" v-for="(elem, index) in this.process.box" :key="index">
+            <div class="process-col" v-for="(elem, index) in this.process.box" :key="elem.id">
                 <div class="col">
                     <div class="dot">
-                        01
+                        0 {{ index + 1 }}
                     </div>
                 </div>
                 <h5 class="box-title">
-                    {{index}}
+                    {{elem.title}}
                 </h5>
                 <p class="ms_white-text">{{elem.parag}}</p>
             </div>

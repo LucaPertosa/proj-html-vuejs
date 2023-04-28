@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg-img-b">
+    <div class="bg-img-b" :id="'team'">
         <div class="container">
             <div class="ms_row-2">
                 <div class="ms_col-75">

@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg-img-w">
+    <div class="bg-img-w" :id="'services'">
         <div class="container">
             <div class="col">
                 <h6>{{this.services.sec}}</h6>
@@ -60,7 +60,9 @@ export default {
                     <div class="ms_card" v-for="(elem, index) in this.services.box" :key="index">
                         <div class="ms_relative">
                             <i :class="elem.icon" class="services"></i>
-                            <i class="fa-solid fa-arrow-right fa-2xl icons-clr ms_absolute"></i>
+                            <a href="">
+                                <i class="fa-solid fa-arrow-right fa-2xl icons-clr ms_absolute"></i>
+                            </a>
                         </div>
                         <h5 class="box-title">
                             {{index}}

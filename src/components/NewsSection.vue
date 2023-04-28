@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-    <div class="bg-img-l">
+    <div class="bg-img-l" :id="'blog'">
         <div class="container">
             <div class="col">
                 <h6>{{this.news.sec}}</h6>

@@ -30,7 +30,7 @@ export default {
 
 <template>
     <AppHeader/>
-    <HomeSection />
+    <HomeSection/>
     <AboutSection />
     <ServicesSection />
     <ProcessSection/>
