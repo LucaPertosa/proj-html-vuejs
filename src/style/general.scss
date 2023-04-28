@@ -28,3 +28,11 @@ a {
 a:hover {
     color: unset;
 }
+hr {
+    opacity: 1;
+    position: relative;
+    z-index: 1;
+}
+.white {
+    color: white;
+}

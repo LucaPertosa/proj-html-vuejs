@@ -26,9 +26,11 @@ export default {
         background-color: $btn-color-light;
         border: 1px solid $btn-light-txt;
         color: $btn-light-txt;
-
+    }
+    &.footer {
+        background-color: inherit;
+        border: 1px solid $btn-light-txt;
+        color: $btn-dark-txt;
     }
 }
-
-
 </style>

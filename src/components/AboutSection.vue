@@ -13,7 +13,7 @@ export default {
         }
     },
     methods: {
-        highlightWord(str, n) {
+        highlightWord(str, n, bol) {
             // divide la stringa in parole
             let words = str.split(" ");
             
@@ -22,8 +22,16 @@ export default {
                 return str;
             }
             
-            // mette la parola scelta tra i tag <mark>
-            words[n] = '<span class="green-select">' + words[n] + '</span>';
+            if (bol === true) {
+                // mette la parola scelta tra i tag <mark>
+                words[n] = '<span class="green-select">' + words[n] + '</span>';
+            } else if (bol === false){
+                words[n] = '<span class="green-select green">' + words[n] + '</span>';
+            } else if(bol === '') {
+                words[n] = '<span class="green-select dark">' + words[n] + '</span>';
+            } else {
+                words[n] = '<span class="green-select">' + words[n] + '</span>';
+            }
             
             // ricostruisce la stringa con le parole evidenziate
             let highlightedStr = words.join(" ");
@@ -40,7 +48,7 @@ export default {
             <div class="ms_row-2">
                 <div class="ms_col">
                     <h6>{{this.about.sec}}</h6>
-                    <h2 class="ms_section-title" v-html="highlightWord(this.about.title, 0)">
+                    <h2 class="ms_section-title" v-html="highlightWord(this.about.title, 0, '')">
                     </h2>
                     <p class="ms_white-text">
                         {{this.about.parag}}
@@ -73,8 +81,15 @@ export default {
     width: 100%;
 }
 .green-select {
-    background-color: rgba($logo-color, $alpha: 0.3);
+    background-color: $highline-var;
     padding: 0.5rem 1rem ;
+    border-radius: $pad1;
+    &.green {
+        color: $btn-color-dark;
+    }
+    &.dark {
+        background-color: $highline-dark;
+    }
 }
 .ms_section-title {
     color: white;
@@ -82,6 +97,7 @@ export default {
     font-weight: 700;
     text-transform: capitalize;
 }
+
 .ms_row-2 {
     display: flex;
     align-items: center;
@@ -112,8 +128,8 @@ h6 {
 }
 .box-2 {
     width: calc(50% - $pad3);
-    margin-top: $pad3;
-    margin-left: $pad3;
+    margin-bottom: $pad3;
+    margin-right: $pad3;
     height: 100%;
 }
 .box-title {
@@ -121,7 +137,7 @@ h6 {
     text-transform: capitalize;
 }
 .icons-clr {
-    color: $logo-color;
+    color: $btn-color-dark;
 }
 .form-control {
     background-color: grey;

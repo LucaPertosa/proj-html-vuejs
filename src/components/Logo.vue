@@ -1,13 +1,16 @@
 <script>
 export default {
     name: "Logo",
+    props: {
+        color: String,
+    }
 }
 </script>
 
 <template>
 <div class="ms_logo">
     <p class="left-log">nex</p>
-    <p class="right-log">gen</p>
+    <p class="right-log" :class="color">gen</p>
 </div>
 </template>
 
@@ -32,5 +35,8 @@ export default {
     color: black;
     display: inline-block;
     background-color: transparent;
+    &.light {
+        color: white
+    }
 }
 </style>

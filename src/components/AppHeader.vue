@@ -16,6 +16,16 @@ export default {
 
         }
     },
+    mounted() {
+        window.addEventListener("scroll", function () {
+            var header = this.document.getElementById("header");
+            if (window.pageYOffset > 0) {
+                header.style.backgroundColor = `#E2E8E8`;
+            } else {
+                header.style.backgroundColor = "transparent";
+            }
+        })
+    }
 }
 </script>
 
@@ -28,12 +38,12 @@ export default {
                         Open Hours: Mon - Sat - 9:00 - 18:00
                     </div>
                     <div class="contacts">
-                        <Nav :array="this.store.contacts" class="f_size d-flex"/>
+                        <Nav :array="this.store.contacts" :header="``"/>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="ms_back-img">
+        <div class="ms_back-img" id="header">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-between pad">
                     <Logo/>
@@ -60,17 +70,20 @@ export default {
     padding-top: $pad3;
     padding-bottom: $pad3;
 }
-
+.contacts {
+    width: 40%;
+}
 .f_size {
     font-size: .8rem;
 }
 .ms_back-img {
-    color: transparent;
+    background-color: transparent;
 }
 .stick {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 999;
 }
 </style>
